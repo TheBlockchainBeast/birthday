@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#383029] px-4 md:px-10 py-3">
+    <header className="fixed top-0 left-0 w-full bg-[#181411] flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#383029] px-4 md:px-10 py-3 z-10">
     <div className="flex items-center gap-4 text-white">
       <div className="size-4">
         <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">

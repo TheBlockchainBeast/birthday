@@ -58,10 +58,10 @@ const RSVPForm = () => {
   };
 
   return (
-    <div className="layout-content-container flex flex-col w-[512px] max-w-[512px] py-5 flex-1">
+    <div className="layout-content-container flex flex-col py-5 flex-1">
       <h2 className="text-white tracking-light text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-5">RSVP</h2>
       <form onSubmit={handleSubmit} className="flex flex-col">
-        <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+        <div className="flex flex-wrap items-end gap-4 px-4 py-3">
           <label className="flex flex-col min-w-40 flex-1">
             <p className="text-white text-base font-medium leading-normal pb-2">Your Name</p>
             <input
@@ -72,7 +72,7 @@ const RSVPForm = () => {
             />
           </label>
         </div>
-        <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+        <div className="flex flex-wrap items-end gap-4 px-4 py-3">
           <label className="flex flex-col min-w-40 flex-1">
             <p className="text-white text-base font-medium leading-normal pb-2">Number of Guests</p>
             <input
@@ -84,7 +84,7 @@ const RSVPForm = () => {
             />
           </label>
         </div>
-        <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+        <div className="flex flex-wrap items-end gap-4 px-4 py-3">
           <label className="flex flex-col min-w-40 flex-1">
             <p className="text-white text-base font-medium leading-normal pb-2">Attendance</p>
             <select
@@ -98,7 +98,7 @@ const RSVPForm = () => {
             </select>
           </label>
         </div>
-        <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+        <div className="flex flex-wrap items-end gap-4 px-4 py-3">
           <label className="flex flex-col min-w-40 flex-1">
             <p className="text-white text-base font-medium leading-normal pb-2">Dietary Restrictions</p>
             <textarea

@@ -44,7 +44,7 @@ const GalleryPage = () => {
     <div className="relative flex size-full min-h-screen flex-col bg-[#181411] dark group/design-root overflow-x-hidden" style={{ fontFamily: '"Noto Serif", "Noto Sans", sans-serif' }}>
       <div className="layout-container flex h-full grow flex-col">
         <Header />
-        <div className="flex flex-1 justify-center py-5">
+        <div className="flex flex-1 justify-center py-5 mt-20">
           <div className="layout-content-container flex flex-col max-w-[960px] flex-1 px-4 md:px-40">
             <div className="flex flex-wrap justify-between gap-3 p-4">
               <p className="text-white tracking-light text-[32px] font-bold leading-tight min-w-72">A Life in Pictures</p>
