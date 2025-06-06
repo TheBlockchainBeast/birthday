@@ -42,7 +42,7 @@ const CountdownTimer = () => {
   }, [targetDate]);
 
   return (
-    <div className="text-center text-[#0c1c17] text-xl font-bold leading-tight tracking-[-0.015em] mt-4">
+    <div className="text-center text-white text-xl font-bold leading-tight tracking-[-0.015em] mt-4">
       {timeRemaining.days} Days, {timeRemaining.hours} Hours, {timeRemaining.minutes} Minutes, {timeRemaining.seconds} Seconds until the big day!
     </div>
   );
