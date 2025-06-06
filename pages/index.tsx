@@ -21,11 +21,11 @@ const HomePage = () => {
                     <h1
                       className="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
                     >
-                      Happy 70th Birthday, Papa!
+                      Happy 70th Birthday, Daddy!
                     </h1>
                     <h2 className="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
-                      Join us in celebrating the incredible life and legacy of a truly remarkable man. This website is dedicated to sharing memories, stories, and well wishes for a
-                      very special 70th birthday.
+                    Join us in celebrating the life, legacy, and faith of a truly remarkable man. <br />
+                    This website is a heartfelt tribute to Pastor Ekeleme Ifenkwe as he marks his 70th birthday—a space to share cherished memories, inspiring stories, and warm wishes in honor of his incredible journey.
                     </h2>
                     </div>
             <CountdownTimer />
