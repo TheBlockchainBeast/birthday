@@ -1,48 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { doc, getDoc } from "firebase/firestore";
-import { db } from '../lib/firebase';
+import React from 'react';
 
 const EventDetails = () => {
-  const [eventData, setEventData] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  // Assuming a fixed event ID for now
-  const eventId = "main-event";
-
-  useEffect(() => {
-    const fetchEvent = async () => {
-      try {
-        const eventRef = doc(db, "events", eventId);
-        const eventSnap = await getDoc(eventRef);
-
-        if (eventSnap.exists()) {
-          setEventData(eventSnap.data());
-        } else {
-          setError("Event not found");
-        }
-      } catch (err: any) {
-        console.error("Error fetching event details: ", err);
-        setError("Failed to load event details.");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchEvent();
-  }, [eventId]); // Depend on eventId, though it's fixed for now
-
-  if (loading) {
-    return <div className="text-white text-center py-5">Loading event details...</div>;
-  }
-
-  if (error) {
-    return <div className="text-red-500 text-center py-5">Error: {error}</div>;
-  }
-
-  if (!eventData) {
-    return <div className="text-white text-center py-5">No event details available.</div>;
-  }
+  const eventDetails = {
+    date: "15th of June, 2025",
+    time: "1pm",
+    location: "Jesus The Ark Bible Church, 55, alhaji saubana ogundipe street, Agbelekale, Abule-Egba, Lagos.",
+    dressCode: "Semi-Formal",
+    rsvpInfo: "See invitation"
+  };
 
   // Assuming eventData has fields like date, time, location, dressCode, rsvpInfo
   return (
@@ -51,23 +16,23 @@ const EventDetails = () => {
       <div className="p-4 grid grid-cols-[20%_1fr] gap-x-6">
         <div className="col-span-2 grid grid-cols-subgrid border-t border-t-[#53473c] py-5">
           <p className="text-[#b8ab9d] text-sm font-normal leading-normal">Date</p>
-          <p className="text-white text-sm font-normal leading-normal">{eventData.date}</p>
+          <p className="text-white text-sm font-normal leading-normal">{eventDetails.date}</p>
         </div>
         <div className="col-span-2 grid grid-cols-subgrid border-t border-t-[#53473c] py-5">
           <p className="text-[#b8ab9d] text-sm font-normal leading-normal">Time</p>
-          <p className="text-white text-sm font-normal leading-normal">{eventData.time}</p>
+          <p className="text-white text-sm font-normal leading-normal">{eventDetails.time}</p>
         </div>
         <div className="col-span-2 grid grid-cols-subgrid border-t border-t-[#53473c] py-5">
           <p className="text-[#b8ab9d] text-sm font-normal leading-normal">Location</p>
-          <p className="text-white text-sm font-normal leading-normal">{eventData.location}</p>
+          <p className="text-white text-sm font-normal leading-normal">{eventDetails.location}</p>
         </div>
         <div className="col-span-2 grid grid-cols-subgrid border-t border-t-[#53473c] py-5">
           <p className="text-[#b8ab9d] text-sm font-normal leading-normal">Dress Code</p>
-          <p className="text-white text-sm font-normal leading-normal">{eventData.dressCode}</p>
+          <p className="text-white text-sm font-normal leading-normal">{eventDetails.dressCode}</p>
         </div>
         <div className="col-span-2 grid grid-cols-subgrid border-t border-t-[#53473c] py-5">
           <p className="text-[#b8ab9d] text-sm font-normal leading-normal">RSVP</p>
-          <p className="text-white text-sm font-normal leading-normal">{eventData.rsvpInfo}</p>
+          <p className="text-white text-sm font-normal leading-normal">{eventDetails.rsvpInfo}</p>
         </div>
       </div>
     </div>
